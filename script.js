@@ -32,8 +32,10 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', newTheme);
 });
 
-// Dynamic typing effect for the title
-const titles = ['Web Developer', 'Designer', 'Creative Thinker'];
+// Update the titles array to include both roles
+const titles = ['AI Developer', 'Web Developer'];
+
+// Restore the original typing effect for multiple titles
 let titleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;

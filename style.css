@@ -290,6 +290,10 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 40%;  /* Increased from 30% to 40% to move image down */
+    border-radius: 50%;
+    border: 4px solid var(--accent-primary);
+    object-fit: cover;
 }
 
 .social-links-home {
@@ -404,5 +408,80 @@ footer {
 @media (max-width: 768px) {
     .nav-controls {
         gap: 0.5rem;
+    }
+}
+
+/* Skills Section Styling */
+.skills-container {
+    display: flex;  /* Horizontal layout for categories */
+    gap: 2rem;
+    margin-top: 2rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.skill-category {
+    flex: 0 0 auto;
+    width: 350px;
+    background: var(--bg-primary);
+    padding: 1.2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.skill-category h4 {
+    color: var(--accent-primary);
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--accent-primary);
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.skill-category ul {
+    display: flex;
+    flex-direction: column;  /* Keep skills vertical within categories */
+    gap: 0.4rem;
+}
+
+.skill-category li {
+    padding: 0.3rem 0.6rem;
+    background: rgba(var(--accent-primary-rgb), 0.1);
+    border-radius: 15px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+/* Certifications Section Styling */
+.certifications-grid {
+    display: flex;  /* Horizontal layout for certificates */
+    gap: 2rem;
+    margin-top: 2rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.certification-card {
+    flex: 0 0 auto;
+    width: 350px;
+    background: var(--bg-primary);
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hide scrollbars but keep functionality */
+.skills-container::-webkit-scrollbar,
+.certifications-grid::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skill-category,
+    .certification-card {
+        width: 300px;
     }
 } 
